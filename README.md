@@ -1,6 +1,6 @@
-### Mongodb concepts in depth
+# Mongodb concepts in depth
 
-## configuration
+## Configuration in Project's root folder
 
 1. create a .env file in root folder
 2. create MONGO_DB_URI=<mongodb_connection_string>
@@ -34,3 +34,13 @@
 you can run commands like:
 1. ```npm run concurrency-nonatomic```
 2. ```npm run concurrency-atomic```
+
+## Conclusion
+
+* ✅ Use the increment-atomic endpoint (fast, ~15ms latency)
+
+* ✅ Or increase test duration (-d 30)
+
+* ✅ Or optimize DB writes (indexing, local replica, etc.)
+
+* ❌ Avoid JS memory-based updates for counters
