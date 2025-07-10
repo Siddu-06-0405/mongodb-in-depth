@@ -30,4 +30,7 @@
 - we are using autocannon package
 - in one terminal instance 
 ```npm run concurrency```
-```npx autocannon -c 100 -d 10 http://localhost:3000/increment```
+- in another terminal instance 
+you can run commands like:
+1. ```npm run concurrency-nonatomic```
+2. ```npm run concurrency-atomic```
