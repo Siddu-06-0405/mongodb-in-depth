@@ -1,0 +1,35 @@
+{
+  "name": "mongodb-in-depth",
+  "version": "1.0.0",
+  "description": "database learnings",
+  "main": "concurrency-control/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "concurrency": "node concurrency-control/server.js",
+    "concurrency-nonatomic": "autocannon -m POST -c 100 -d 10 http://localhost:3000/increment",
+    "concurrency-atomic": "autocannon -m POST -c 100 -d 10 http://localhost:3000/increment-atomic"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siddu-06-0405/mongodb-in-depth.git"
+  },
+  "keywords": [
+    "mongodb",
+    "database",
+    "concepts",
+    "in",
+    "depth"
+  ],
+  "author": "Siddardha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Siddu-06-0405/mongodb-in-depth/issues"
+  },
+  "homepage": "https://github.com/Siddu-06-0405/mongodb-in-depth#readme",
+  "dependencies": {
+    "autocannon": "^8.0.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.2"
+  }
+}
